@@ -1,5 +1,7 @@
 # dotfiles
 
+Gluing things together with zsh.
+
 ## One-Time Setup
 
 ```sh
