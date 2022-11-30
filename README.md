@@ -7,7 +7,7 @@ Gluing things together with shell scripts.
 ```sh
 mkdir -p ${HOME}/dev
 cd ${HOME}/dev
-git@github.com:zwbetz-gh/dotfiles.git
+git clone git@github.com:zach-betz-hln/dotfiles.git
 cd dotfiles
 ./setup.sh
 ```
