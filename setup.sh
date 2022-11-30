@@ -1,4 +1,4 @@
-#/usr/bin/env zsh
+#/usr/bin/env bash
 
 # Make old dotfiles dir
 dotfiles_old=${HOME}/dotfiles_old
