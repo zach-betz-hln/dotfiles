@@ -1,6 +1,6 @@
 # dotfiles
 
-Gluing things together with zsh.
+Gluing things together with shell scripts.
 
 ## One-Time Setup
 
