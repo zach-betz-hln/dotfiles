@@ -21,10 +21,18 @@ export NEWLINE=$'\n'
 export PROMPT='%n@%m %F{cyan}%~%F{reset_color} %F{yellow}$(current_git_branch)%F{reset_color} ${NEWLINE}%# '
 
 ################################################################################
-# PATH
+# PATH and Env Vars
 ################################################################################
 
+# Various tools
 export PATH="${HOME}/bin:${PATH}"
+
+# Java
+export JAVA_HOME="${HOME}/bin/jdk-17.0.5+8/Contents/Home"
+export PATH="${JAVA_HOME}/bin:${PATH}"
+
+# Maven
+export PATH="${HOME}/bin/apache-maven-3.8.6/bin:${PATH}"
 
 ################################################################################
 # Aliases
