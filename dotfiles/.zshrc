@@ -34,6 +34,9 @@ export PATH="${JAVA_HOME}/bin:${PATH}"
 # Maven
 export PATH="${HOME}/bin/apache-maven-3.8.6/bin:${PATH}"
 
+# Node.js
+export PATH="${HOME}/bin/node-v18.12.1-darwin-arm64/bin:${PATH}"
+
 ################################################################################
 # Aliases
 ################################################################################
