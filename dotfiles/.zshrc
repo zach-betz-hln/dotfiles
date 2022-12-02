@@ -7,7 +7,7 @@
 setopt PROMPT_SUBST
 
 # https://zwbetz.com/change-terminal-prompt-on-mac/
-current_git_branch() {
+format_current_git_branch() {
   local BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
   if [[ -n ${BRANCH} ]] ; then
     echo "(${BRANCH})"
@@ -17,8 +17,8 @@ current_git_branch() {
 # https://unix.stackexchange.com/a/126316
 export NEWLINE=$'\n'
 
-# The PROMPT must be wrapped in single quotes in order for current_git_branch to refresh on each dir change
-export PROMPT='%n@%m %F{cyan}%~%F{reset_color} %F{yellow}$(current_git_branch)%F{reset_color} ${NEWLINE}%# '
+# The PROMPT must be wrapped in single quotes in order for the current git branch to refresh on each dir change
+export PROMPT='%n@%m %F{cyan}%~%F{reset_color} %F{yellow}$(format_current_git_branch)%F{reset_color} ${NEWLINE}%# '
 
 ################################################################################
 # PATH and Env Vars
@@ -43,3 +43,11 @@ export PATH="${HOME}/bin/node-v18.12.1-darwin-arm64/bin:${PATH}"
 
 alias ll="ls -alFh"
 alias grep="grep --color=auto"
+
+################################################################################
+# Functions
+################################################################################
+
+change_to_vscode_user_settings_dir() {
+  cd "${HOME}/Library/Application Support/Code/User/"
+}
