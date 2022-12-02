@@ -41,6 +41,25 @@ export PATH="${HOME}/bin/node-v18.12.1-darwin-arm64/bin:${PATH}"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ################################################################################
+# Command Completions
+################################################################################
+
+# To activate these completions, add the following to your .zshrc:
+if type brew &>/dev/null ; then
+  FPATH="$(brew --prefix)/share/zsh-completions:${FPATH}"
+  autoload -Uz compinit
+  compinit
+
+  # You may also need to force rebuild `zcompdump`:
+  # rm -f ~/.zcompdump
+  # compinit
+
+  # Additionally, if you receive "zsh compinit: insecure directories" warnings when attempting to load these completions, you may need to run this:
+  # chmod -R go-w /opt/homebrew/share
+  # chmod -R go-w /opt/homebrew/share/zsh
+fi
+
+################################################################################
 # Aliases
 ################################################################################
 
