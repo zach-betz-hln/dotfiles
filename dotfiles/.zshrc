@@ -21,7 +21,7 @@ export NEWLINE=$'\n'
 export PROMPT='%n@%m %F{cyan}%~%F{reset_color} %F{yellow}$(format_current_git_branch)%F{reset_color} ${NEWLINE}%# '
 
 ################################################################################
-# PATH and Env Vars
+# PATH
 ################################################################################
 
 # Various tools
