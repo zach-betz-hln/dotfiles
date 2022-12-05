@@ -45,7 +45,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 ################################################################################
 
 # To activate these completions, add the following to your .zshrc:
-if type brew &>/dev/null ; then
+if type brew &> /dev/null ; then
   FPATH="$(brew --prefix)/share/zsh-completions:${FPATH}"
   autoload -Uz compinit
   compinit
