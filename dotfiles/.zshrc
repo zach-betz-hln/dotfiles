@@ -6,7 +6,7 @@
 # https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
 setopt PROMPT_SUBST
 
-# https://zwbetz.com/change-terminal-prompt-on-mac/
+# https://zwbetz.com/how-to-change-your-zsh-shell-prompt/
 format_current_git_branch() {
   local BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
   if [[ -n ${BRANCH} ]] ; then
