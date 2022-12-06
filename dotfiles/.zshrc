@@ -8,7 +8,7 @@ setopt PROMPT_SUBST
 
 # https://zwbetz.com/how-to-change-your-zsh-shell-prompt/
 format_current_git_branch() {
-  local BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+  BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
   if [[ -n ${BRANCH} ]] ; then
     echo "(${BRANCH})"
   fi
