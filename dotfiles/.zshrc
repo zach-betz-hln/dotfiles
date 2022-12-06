@@ -73,3 +73,7 @@ alias grep="grep --color=auto"
 change_to_vscode_user_settings_dir() {
   cd "${HOME}/Library/Application Support/Code/User/"
 }
+
+pretty_print_path() {
+  echo ${PATH} | tr ':' '\n'
+}
