@@ -80,6 +80,7 @@ pretty_print_path() {
 
 source_secrets() {
   SECRETS_FILE="${HOME}/dev/dotfiles/.secrets"
-  cat ${SECRETS_FILE}
   source ${SECRETS_FILE}
 }
+
+source_secrets
