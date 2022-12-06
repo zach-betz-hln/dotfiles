@@ -85,3 +85,19 @@ export_secrets_into_current_shell() {
 }
 
 export_secrets_into_current_shell
+
+# Gifted from https://github.com/barrett-hln
+# Sample: install_yarn_peer_dependencies @hlnconsulting/eslint-config-prettier-react
+install_yarn_peer_dependencies() {
+  PACKAGE="${1}"
+
+  if [[ -z ${PACKAGE} ]] ; then
+    echo "PACKAGE is required"
+    return 1
+  fi
+
+  yarn npm info ${PACKAGE} --fields peerDependencies --json \
+  | jq '.peerDependencies' \
+  | jq -r 'keys[] as $k | "\($k)@\(.[$k])"' \
+  | xargs yarn add
+}
