@@ -78,9 +78,10 @@ pretty_print_path() {
   echo ${PATH} | tr ':' '\n'
 }
 
-source_secrets() {
+export_secrets_into_current_shell() {
   SECRETS_FILE="${HOME}/dev/dotfiles/.secrets"
-  source ${SECRETS_FILE}
+  # grep -v '^#' ${SECRETS_FILE}
+  export $(grep -v '^#' ${SECRETS_FILE} | xargs)
 }
 
-source_secrets
+export_secrets_into_current_shell
