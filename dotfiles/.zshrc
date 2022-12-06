@@ -71,7 +71,7 @@ alias gs="git status"
 alias gd="git diff"
 alias ga="git add"
 alias gm="git commit"
-
+alias gp="git push"
 
 ################################################################################
 # Functions
