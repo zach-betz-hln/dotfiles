@@ -77,3 +77,9 @@ change_to_vscode_user_settings_dir() {
 pretty_print_path() {
   echo ${PATH} | tr ':' '\n'
 }
+
+source_secrets() {
+  SECRETS_FILE="${HOME}/dev/dotfiles/.secrets"
+  cat ${SECRETS_FILE}
+  source ${SECRETS_FILE}
+}
