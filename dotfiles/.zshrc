@@ -64,7 +64,14 @@ fi
 ################################################################################
 
 alias ll="ls -alFh"
+
 alias grep="grep --color=auto"
+
+alias gs="git status"
+alias gd="git diff"
+alias ga="git add"
+alias gm="git commit"
+
 
 ################################################################################
 # Functions
