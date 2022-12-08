@@ -92,3 +92,11 @@ export_secrets_into_current_shell() {
 }
 
 export_secrets_into_current_shell
+
+stop_all_docker_containers() {
+  docker ps -a --format "{{.ID}}" | xargs docker stop
+}
+
+remove_all_docker_containers() {
+  docker ps -a --format "{{.ID}}" | xargs docker rm
+}
