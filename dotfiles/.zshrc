@@ -68,7 +68,7 @@ alias ll="ls -alFh"
 alias grep="grep --color=auto"
 
 ################################################################################
-# Functions
+# General Functions
 ################################################################################
 
 change_to_vscode_user_settings_dir() {
@@ -87,10 +87,26 @@ export_secrets_into_current_shell() {
 
 export_secrets_into_current_shell
 
+################################################################################
+# Docker Functions
+################################################################################
+
 stop_all_docker_containers() {
   docker ps -a --format "{{.ID}}" | xargs docker stop
 }
 
 remove_all_docker_containers() {
   docker ps -a --format "{{.ID}}" | xargs docker rm
+}
+
+################################################################################
+# Project Functions
+################################################################################
+
+build_nyc_mvr_service() {
+  mvn package
+}
+
+run_nyc_mvr_service() {
+  mvn spring-boot:run
 }
