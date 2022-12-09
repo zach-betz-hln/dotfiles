@@ -75,6 +75,10 @@ change_to_vscode_user_settings_dir() {
   cd "${HOME}/Library/Application Support/Code/User/"
 }
 
+change_to_openvpn_profiles_dir() {
+  cd "${HOME}/Library/Application Support/OpenVPN Connect/profiles/"
+}
+
 pretty_print_path() {
   echo ${PATH} | tr ':' '\n'
 }
