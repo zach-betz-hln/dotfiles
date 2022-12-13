@@ -104,6 +104,21 @@ remove_all_docker_containers() {
 }
 
 ################################################################################
+# Git Functions
+################################################################################
+
+delete_all_git_branches_except_current() {
+  echo "Before"
+  git branch
+
+  echo "Deleting all git branches except current"
+  git branch | grep -v '^*' | xargs git branch -D
+
+  echo "After"
+  git branch
+}
+
+################################################################################
 # Project Functions
 ################################################################################
 
