@@ -40,6 +40,13 @@ export PATH="${HOME}/bin/node-v18.12.1-darwin-arm64/bin:${PATH}"
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# PDF diff tooling
+export PATH="/opt/homebrew/opt/libxml2/bin:${PATH}"
+export PATH="/opt/homebrew/opt/libxslt/bin:${PATH}"
+
+# Python
+export PATH="${HOME}/Library/Python/3.9/bin:${PATH}"
+
 ################################################################################
 # Command Completions
 ################################################################################
