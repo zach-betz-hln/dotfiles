@@ -10,7 +10,7 @@ setopt PROMPT_SUBST
 format_current_git_branch() {
   BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
   if [[ -n ${BRANCH} ]] ; then
-    echo "(${BRANCH})"
+    echo "${BRANCH}"
   fi
 }
 
