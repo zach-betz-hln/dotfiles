@@ -110,6 +110,20 @@ remove_all_docker_containers() {
   docker ps -a --format "{{.ID}}" | xargs docker rm
 }
 
+clean_docker() {
+  echo "Pruning unused containers"
+  docker container prune -f
+
+  echo "Pruning unused images"
+  docker image prune -f
+
+  echo "Pruning unused volumes"
+  docker volume prune -f
+
+  echo "Pruning unused data"
+  docker system prune -f
+}
+
 ################################################################################
 # Git Functions
 ################################################################################
