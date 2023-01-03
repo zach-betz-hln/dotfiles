@@ -135,6 +135,9 @@ delete_all_git_branches_except_current() {
   echo "Deleting all git branches except current"
   git branch | grep -v '^*' | xargs git branch -D
 
+  echo "Removing any remote-tracking references that no longer exist on the remote"
+  git fetch -p
+
   echo "After"
   git branch
 }
