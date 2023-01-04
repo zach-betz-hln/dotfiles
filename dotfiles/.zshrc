@@ -149,10 +149,10 @@ delete_all_git_branches_except_current() {
 # Project Functions
 ################################################################################
 
-build_nyc_mvr_service() {
+build_mvn() {
   mvn package
 }
 
-run_nyc_mvr_service() {
+run_mvn() {
   mvn spring-boot:run
 }
