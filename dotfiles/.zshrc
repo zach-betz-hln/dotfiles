@@ -47,6 +47,9 @@ export PATH="/opt/homebrew/opt/libxslt/bin:${PATH}"
 # Python
 export PATH="${HOME}/Library/Python/3.9/bin:${PATH}"
 
+# Google Cloud
+export PATH="${HOME}/bin/google-cloud-sdk/bin:${PATH}"
+
 ################################################################################
 # Command Completions
 ################################################################################
